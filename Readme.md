@@ -15,11 +15,18 @@
   // Wrap text in each paragraph with the wrapper
   wrapText(document.querySelectorAll('p'), wrapper) 
 
-  // Example Input:
-  // <p>Lorem Ipsum, <strong>Dolar sit</strong> amet.</p>
-
-  // Example Output:
-  // <p><span>Lorem Ipsum, </span><strong><span>Dolar sit</span></strong><span> amet.</span></p>
+```
+### Example Input:
+```html
+<p>
+  Lorem Ipsum, <strong>Dolar sit</strong> amet.
+</p>
+```
+### Example Output:
+```html
+<p>
+  <span>Lorem Ipsum, </span><strong><span>Dolar sit</span></strong><span> amet.</span>
+</p>
 ```
 
 ## License
