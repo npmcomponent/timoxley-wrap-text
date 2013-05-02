@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wrap Text Example</title>
+<style>
+ 
+span {
+  background-color: rgba(255, 0, 0, 0.3)
+}
+
+</style>
+</head>
+
+<body id="home">
+<h1>Wrap the paragraphs</h1>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed lorem mauris, at eleifend leo. Aenean sed diam at leo vestibulum vulputate. Sed molestie, arcu sed feugiat gravida, metus neque auctor felis, sed posuere tortor nunc eget eros. Pellentesque magna arcu, congue sed scelerisque a, faucibus id dolor. Quisque eget enim sit amet purus ullamcorper volutpat facilisis ornare elit. Phasellus mauris purus, eleifend tempus ultricies vel, elementum id tellus. Sed nisl quam, elementum vel euismod ut, pretium eget mauris.
+</p>
+<p>
+Duis consequat velit quis nunc varius aliquam. Suspendisse suscipit elementum nisl, id iaculis mauris rutrum et. Nullam dictum rutrum orci eget placerat. Cras vel velit quis libero suscipit semper eget tincidunt massa. Aliquam dignissim, massa id tristique aliquam, nisl nisi consequat eros, eleifend euismod eros nunc at diam. Cras vulputate sodales purus, nec auctor mi rutrum ac. Duis cursus quam purus, a commodo lacus. Vivamus sit amet diam sit amet nisl porttitor euismod. Quisque sit amet felis odio. Phasellus convallis sollicitudin arcu, nec imperdiet tortor ullamcorper sit amet. In in urna et dui interdum convallis. Phasellus feugiat lobortis nunc, sed tempus mauris cursus ut. Ut hendrerit tortor ante, elementum mollis eros. Vivamus sit amet ullamcorper sapien.
+</p>
+<p>
+Nulla imperdiet lacinia est vitae tincidunt. Quisque libero risus, tempus ac malesuada a, pellentesque eget lorem. Duis a nisl urna. Mauris auctor facilisis eros, vel condimentum eros cursus facilisis. Vestibulum nec quam quis lectus laoreet pharetra. Quisque sodales tempor lorem, sodales ultricies erat tempor sed. In consequat venenatis nisi quis ullamcorper. Vivamus nec lorem euismod leo ultricies condimentum. Cras vestibulum consequat tortor, a ornare massa ullamcorper in. Proin ipsum justo, ultrices vestibulum mollis vitae, laoreet at tellus. Nunc facilisis convallis gravida.
+</p>
+<p>
+Morbi a metus mattis urna porttitor tincidunt quis et lacus. Nulla ac lacus augue, id gravida ante. Aliquam eget aliquet urna. Sed consequat, arcu sed porttitor laoreet, tellus mauris bibendum odio, id varius nulla lectus sed sapien. Sed nec libero eget orci auctor iaculis. Duis scelerisque nulla eget massa aliquam vel feugiat justo faucibus. Nullam nec orci at lacus ornare posuere et sed lacus. Mauris varius nulla a dui lobortis nec venenatis magna placerat. Integer congue, turpis nec consequat interdum, nulla ipsum scelerisque enim, eget aliquam quam libero id magna. Quisque adipiscing suscipit quam, quis sollicitudin mauris eleifend non. Vestibulum rhoncus consectetur dui eget aliquet.
+</p>
+<p>
+Proin bibendum ullamcorper porta. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In id urna non est tincidunt convallis sit amet a tellus. Curabitur sed sapien at justo convallis convallis vel id magna. Nam dolor nulla, adipiscing a eleifend ut, semper ut ligula. Nullam mi erat, euismod sed ultrices eu, tincidunt quis leo. In vel ante justo. Maecenas id sem felis. Cras ac nisi orci.
+</p>
+<script src="../build/build.js"></script>
+<script>
+  var wrapText = require('wrap-text')
+  var wrapper = document.createElement('span')
+  wrapText(document.querySelectorAll('p'), wrapper)
+</script>
+</body>
+</html>
