@@ -1,4 +1,3 @@
-
 # wrap-text
 
   Wrap text nodes.
@@ -7,9 +6,14 @@
 
     $ component install timoxley/wrap-text
 
-## API
+## Example
 
-   
+```js
+  var wrapText = require('wrap-text')
+  var wrapper = document.createElement('span')
+  // wrap every text node with a span
+  wrapText(document.querySelectorAll('p'), wrapper) 
+```
 
 ## License
 
