@@ -15,6 +15,12 @@ describe('wrapping text', function() {
       wrapText(el, wrapper)
       assert.equal(el.outerHTML, '<p><span>Lorem ipsum</span></p>')
     })
+    it('can unwrap', function() {
+      var wrapper = document.createElement('span')
+      var unwrap = wrapText(el, wrapper)
+      unwrap()
+      assert.equal(el.outerHTML, '<p>Lorem ipsum</p>')
+    })
   })
   describe('list case', function() {
     var el
@@ -26,6 +32,30 @@ describe('wrapping text', function() {
       var wrapper = document.createElement('span')
       wrapText(el, wrapper)
       assert.equal(el.innerHTML, '<li><span>Lorem</span></li><li><span>Ipsum</span></li>')
+    })
+    it('can unwrap', function() {
+      var wrapper = document.createElement('span')
+      var unwrap = wrapText(el, wrapper)
+      unwrap()
+      assert.equal(el.innerHTML, '<li>Lorem</li><li>Ipsum</li>')
+    })
+  })
+  describe('mixed inline elements', function() {
+    var el
+    beforeEach(function() {
+      el = document.createElement('p')
+      el.innerHTML = 'Lorem Ipsum, <strong>Dolar sit</strong> amet.'
+    })
+    it('takes an element and wraps the text in it with clone of supplied el', function() {
+      var wrapper = document.createElement('span')
+      wrapText(el, wrapper)
+      assert.equal(el.innerHTML, '<span>Lorem Ipsum, </span><strong><span>Dolar sit</span></strong><span> amet.</span>')
+    })
+    it('can unwrap', function() {
+      var wrapper = document.createElement('span')
+      var unwrap = wrapText(el, wrapper)
+      unwrap()
+      assert.equal(el.innerHTML, 'Lorem Ipsum, <strong>Dolar sit</strong> amet.')
     })
   })
 })

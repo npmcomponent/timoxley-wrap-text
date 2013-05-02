@@ -1,7 +1,21 @@
 var wrap = require('wrap')
 module.exports = function(el, wrapper) {
+  var wrappedEls = wrapText(el, wrapper)
+  return function() {
+    wrappedEls.map(function(el) {
+      unwrap(el)
+    })
+  }
+}
+
+function unwrap(el) {
+  el.outerHTML = el.innerText
+}
+
+function wrapText(el, wrapper) {
   return findTextNodes(el).map(function(node) {
-    return wrap(node, wrapper.cloneNode())
+    wrap(node, wrapper.cloneNode())
+    return node.parentNode
   })
 }
 
