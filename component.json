@@ -1,0 +1,17 @@
+{
+  "name": "wrap-text",
+  "repo": "timoxley/wrap-text",
+  "description": "Wrap text nodes.",
+  "version": "0.0.1",
+  "keywords": ["wrap", "dom", "text"],
+  "dependencies": {
+    "yields/wrap": "*"
+  },
+  "development": {
+    "timoxley/assert": "*"
+  },
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
