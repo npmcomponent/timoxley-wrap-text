@@ -11,7 +11,8 @@
 ```js
   var wrapText = require('wrap-text')
   var wrapper = document.createElement('span')
-  // wrap every text node with a span
+
+  // wrap the text in each paragraph with the wrapper
   wrapText(document.querySelectorAll('p'), wrapper) 
 ```
 
