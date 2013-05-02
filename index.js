@@ -1,9 +1,24 @@
 var wrap = require('wrap')
 module.exports = function(el, wrapper) {
+  if (el instanceof NodeList) return multi(el, wrapper)
   var wrappedEls = wrapText(el, wrapper)
   return function() {
     wrappedEls.map(function(el) {
       unwrap(el)
+    })
+  }
+}
+
+function multi(els, wrapper) {
+  var unwraps = []
+  for (var i = 0, l = els.length; i < l; i ++) {
+    var el = els[i]
+    unwraps.push(module.exports(el, wrapper))
+  }
+  return function() {
+    console.log(unwraps)
+    unwraps.map(function(fn) {
+      fn()
     })
   }
 }

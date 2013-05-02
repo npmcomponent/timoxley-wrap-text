@@ -58,4 +58,23 @@ describe('wrapping text', function() {
       assert.equal(el.innerHTML, 'Lorem Ipsum, <strong>Dolar sit</strong> amet.')
     })
   })
+  describe('taking a NodeList instead of an element', function() {
+    var el
+    beforeEach(function() {
+      el = document.createElement('ul')
+      el.innerHTML = '<li>Lorem</li><li>Ipsum</li>'
+    })
+    it('wraps each matching element', function() {
+      var wrapper = document.createElement('span')
+      wrapText(el.querySelectorAll('li'), wrapper)
+      console.log("el.innerHTML", el.innerHTML)
+      assert.equal(el.innerHTML, '<li><span>Lorem</span></li><li><span>Ipsum</span></li>')
+    })
+    it('can unwrap', function() {
+      var wrapper = document.createElement('span')
+      var unwrap = wrapText(el.querySelectorAll('li'), wrapper)
+      unwrap()
+      assert.equal(el.innerHTML, '<li>Lorem</li><li>Ipsum</li>')
+    })
+  })
 })
