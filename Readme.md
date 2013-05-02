@@ -19,8 +19,7 @@
   // <p>Lorem Ipsum, <strong>Dolar sit</strong> amet.</p>
 
   // Example Output:
-  // <p><span>Lorem Ipsum, </span><strong><span>Dolar
-sit</span></strong><span> amet.</span></p>
+  // <p><span>Lorem Ipsum, </span><strong><span>Dolar sit</span></strong><span> amet.</span></p>
 ```
 
 ## License
