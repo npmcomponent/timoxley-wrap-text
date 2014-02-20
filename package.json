@@ -1,0 +1,14 @@
+{
+  "name": "timoxley-wrap-text",
+  "description": "Wrap text nodes.",
+  "version": "0.0.1",
+  "keywords": [
+    "wrap",
+    "dom",
+    "text"
+  ],
+  "dependencies": {
+    "yields-wrap": "git://github.com/npmcomponent/yields-wrap.git"
+  },
+  "license": "MIT"
+}

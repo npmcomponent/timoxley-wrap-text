@@ -4,7 +4,7 @@
  * Module dependencies
  */
 
-var wrap = require('wrap')
+var wrap = require('yields-wrap')
 
 /**
  * Wrap an element or elements with clones of wrapper.
